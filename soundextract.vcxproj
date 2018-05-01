@@ -60,6 +60,9 @@
       <TreatWarningAsError>true</TreatWarningAsError>
       <BufferSecurityCheck>false</BufferSecurityCheck>
       <BasicRuntimeChecks />
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
@@ -80,6 +83,9 @@
       <PrecompiledHeaderFile />
       <PrecompiledHeaderOutputFile />
       <BasicRuntimeChecks />
+      <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpplatest</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
