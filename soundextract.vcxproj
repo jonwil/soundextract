@@ -63,11 +63,12 @@
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>kernel32.lib;user32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;comdlg32.lib;libogg_static.lib;libvorbis_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -86,22 +87,32 @@
       <EnforceTypeConversionRules>true</EnforceTypeConversionRules>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpplatest</LanguageStandard>
+      <AdditionalIncludeDirectories>.</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Windows</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>kernel32.lib;user32.lib;comdlg32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>kernel32.lib;user32.lib;comdlg32.lib;libogg_static.lib;libvorbis_static.lib;libvorbis_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="codebook.cpp" />
+    <ClCompile Include="crc.cpp" />
+    <ClCompile Include="revorb.cpp" />
     <ClCompile Include="soundextract.cpp" />
     <ClCompile Include="tinyxml2.cpp" />
+    <ClCompile Include="wwriff.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Bit_stream.h" />
+    <ClInclude Include="codebook.h" />
+    <ClInclude Include="crc.h" />
+    <ClInclude Include="errors.h" />
     <ClInclude Include="resource.h" />
     <ClInclude Include="tinyxml2.h" />
+    <ClInclude Include="wwriff.h" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="soundextract.rc" />
